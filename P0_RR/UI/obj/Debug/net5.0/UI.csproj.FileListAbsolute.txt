@@ -1,0 +1,5 @@
+C:\Users\cm121\TrainingP\P0_RR\UI\obj\Debug\net5.0\UI.csproj.AssemblyReference.cache
+C:\Users\cm121\TrainingP\P0_RR\UI\obj\Debug\net5.0\UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cm121\TrainingP\P0_RR\UI\obj\Debug\net5.0\UI.AssemblyInfoInputs.cache
+C:\Users\cm121\TrainingP\P0_RR\UI\obj\Debug\net5.0\UI.AssemblyInfo.cs
+C:\Users\cm121\TrainingP\P0_RR\UI\obj\Debug\net5.0\UI.csproj.CoreCompileInputs.cache
