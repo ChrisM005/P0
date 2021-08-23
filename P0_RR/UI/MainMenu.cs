@@ -15,7 +15,7 @@ namespace UI
         public void Start()
         {
             List<Restaurant> res = new List<Restaurant>();
-            string rname;
+            //string rname;
             bool repeat = true;
             do
             {
@@ -40,7 +40,7 @@ namespace UI
                         DispResteraunt(res);                        
                     break;
                     case "3":
-                        SearchResteraunt(rname);
+                        SearchResteraunt();
                     break;
                     default:
                         Console.WriteLine("Invalid input, try again.");
@@ -72,19 +72,20 @@ namespace UI
         //Display Restaurant
         public void DispResteraunt(List<Restaurant> r)
         {
+            r = new List<Restaurant>();
             Console.WriteLine("--------------------------------");
-            foreach(int element in r)
+            for(int i=0; i< r.Count; i++)
             {
-                Console.WriteLine(r.Name);
-                Console.WriteLine($"{r.Rating} out of 5");
-                Console.WriteLine(r.Location);
-                Console.WriteLine(r.ZipCode);
+                Console.WriteLine(r[i].Name);
+                Console.WriteLine($"{r[i].Rating} out of 5");
+                Console.WriteLine(r[i].Location);
+                Console.WriteLine(r[i].ZipCode);
                 Console.WriteLine("--------------------------------");
             }
         }
 
         //Search for the Restaurant
-        public void SearchResteraunt(string input)
+        public void SearchResteraunt()
         {
             List<Restaurant> r = new List<Restaurant>();
             List<User> u = new List<User>();
@@ -92,11 +93,12 @@ namespace UI
             string usr;
             string pw;
             int count = 0;
+            string input;
             Console.WriteLine("Search the Resterant name: ");
             input = Console.ReadLine();
-            foreach(int element in r)
+            for(int i=0; i< r.Count; i++)
             {
-                if(input == r.Name)
+                if(input == r[i].Name)
                 {
                     Console.WriteLine("Found Restaurant!");
                     Console.WriteLine("Do you want to Review this Restaurant? (y/n)");
@@ -131,12 +133,12 @@ namespace UI
         public User CheckUser(string username, string password)
         {
             List<User> u = new List<User>();
-            foreach(int element in u)
+            for(int i=0; i< u.Count; i++)
             {
-                if(username == u.uname && password == u.pass)
+                if(username == u[i].uname && password == u[i].pass)
                 {
                     
-                    return u;
+                    return u[i];
                 }
             }
             return null;
